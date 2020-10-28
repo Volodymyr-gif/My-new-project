@@ -1,13 +1,12 @@
+import React from "react";
 import './App.scss';
+import ChoosePage from "../ChoosePage/ChoosePage";
+import MotorcyclePage from "../MotorcyclePage/MotorcyclePage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-         <h1>Ты всех развалишь)) Motivation 1.0</h1>
-      </header>
-    </div>
-  );
+    return (
+        <ChoosePage/>
+    );
 }
 
 export default App;
