@@ -1,0 +1,143 @@
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./photo/motorcyclenum1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.nav-part {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  height: 10vh;
+
+  .first-nav-word {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 5px;
+  }
+}
+
+.second-nav-word {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  color: orangered;
+  letter-spacing: 7px;
+}
+
+.nav-li {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+
+  li {
+    list-style: none;
+
+    a {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      color: white;
+      padding-bottom: 18px;
+    }
+
+    a:hover {
+      border-bottom: 3.5px solid ghostwhite;
+    }
+  }
+}
+.greetingText {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 45px;
+  color: white;
+  text-shadow: 1px 1px red;
+  position: absolute;
+  top: 220px;
+  left: 140px;
+}
+
+.line1, .line2, .line3 {
+  width: 25px;
+  height: 2.6px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 845px) {
+  .nav-li {
+    width: 60%;
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+  .nav-li {
+    position: absolute;
+    right: 0;
+    height: 90vh;
+    top: 10vh;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-li li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0px);
+
+  //li {
+  //  opacity: 1;
+  //  transition: 0.5s;
+  //}
+  //
+  //@for $i from 1 through 10 {
+  //  li:nth-child(#{$i}) {
+  //    transition-delay: $i * 0.5s;
+  //  }
+  //}
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

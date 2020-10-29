@@ -15,7 +15,7 @@ const ChoosePage = () => {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setShowImages(true)
-        }, 3500);
+        }, 2500);
         return () => clearTimeout();
     }, [])
 

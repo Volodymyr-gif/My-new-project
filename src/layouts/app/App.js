@@ -5,7 +5,7 @@ import MotorcyclePage from "../MotorcyclePage/MotorcyclePage";
 
 function App() {
     return (
-        <ChoosePage/>
+        <MotorcyclePage/>
     );
 }
 
