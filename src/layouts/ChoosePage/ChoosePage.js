@@ -10,12 +10,12 @@ const RotateInDownRight = styled.div`animation: 3s ${keyframes`${rotateInDownRig
 const ZoomIn = styled.div`animation: 4s ${keyframes`${zoomIn}`} 3`;
 
 const ChoosePage = () => {
-    const [isTrue, setIsTrue] = useState(true)
+    const [showImages, setShowImages] = useState(false);
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-
-        }, 7000);
+            setShowImages(true)
+        }, 3500);
         return () => clearTimeout();
     }, [])
 
@@ -51,7 +51,7 @@ const ChoosePage = () => {
                     I HAVE ONE QUESTION. <br/>
                     WHAT WOULD YOU LIKE BETTER TO LEARN? <br/>
                 </h1>
-                <ImageAnimation/>
+                {showImages && <ImageAnimation/>}
             </div>
         </header>
     );
