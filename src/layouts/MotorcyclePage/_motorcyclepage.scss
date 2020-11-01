@@ -8,8 +8,6 @@
   position: relative;
   overflow: hidden;
 }
-
-
 .nav-part {
   display: flex;
   justify-content: space-around;
@@ -58,6 +56,7 @@
     }
   }
 }
+
 .greetingText {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -89,8 +88,13 @@
 
 @media (max-width: 780px) {
   .container {
-
+    background-image: url("./photo/motorcyclenum2copy.jpg");
   }
+  .greetingText {
+    top: 50px;
+    left: 65px;
+  }
+
 
   body {
     overflow-x: hidden;

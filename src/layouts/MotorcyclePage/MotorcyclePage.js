@@ -8,25 +8,25 @@ const Pulse = styled.div`animation: 10s ${keyframes`${pulse}`} infinite`;
 
 const MotorcyclePage = () => {
 
-    const navSlide = () => {
-        const burger = document.querySelector(".burger");
-        const nav = document.querySelector(".nav-li");
-        const navLinks = document.querySelectorAll(".nav-li li ");
-
-        burger.addEventListener("click", () => {
-            nav.classList.toggle("nav-active");
-
-            navLinks.forEach((link, index) => {
-
-                if (link.style.animation) {
-                    link.style.animation = ""
-                } else {
-                    link.style.animation = `navLinkFade 0.5s ${index / 2 + 2}s ease-in forwards`;
-                }
-            });
-        });
-    }
-navSlide();
+//     const navSlide = () => {
+//         const burger = document.querySelector(".burger");
+//         const nav = document.querySelector(".nav-li");
+//         const navLinks = document.querySelectorAll(".nav-li li ");
+//
+//         burger.addEventListener("click", () => {
+//             nav.classList.toggle("nav-active");
+//
+//             navLinks.forEach((link, index) => {
+//
+//                 if (link.style.animation) {
+//                     link.style.animation = ""
+//                 } else {
+//                     link.style.animation = `navLinkFade 0.5s ${index / 2 + 2}s ease-in forwards`;
+//                 }
+//             });
+//         });
+//     }
+// navSlide();
 
     return (
         <header className="container">
@@ -35,6 +35,7 @@ navSlide();
                     <a href="#" className="first-nav-word">MOTORCYCLE</a>
                     <a href="#" className="second-nav-word">STYLE</a>
                 </div>
+
                 <ul className="nav-li">
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Motorcycle List</a></li>
