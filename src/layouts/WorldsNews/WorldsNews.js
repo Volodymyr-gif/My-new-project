@@ -36,7 +36,7 @@ const WorldsNews = () => {
 
                     <ul className="nav-li">
                         <li><a href="#">About us</a></li>
-                        <li><a href="#">Motorcycle List</a></li>
+                        <li><a href="#">Type of motorcycle</a></li>
                         <li><a href="#">World's news</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -47,6 +47,7 @@ const WorldsNews = () => {
                     </div>
                 </nav>
             </header>
+           <div className="userInfo">Here you will see news from around the world:</div>
             <main className="mainContainer">
                 <div className="article">
                     {
