@@ -1,0 +1,59 @@
+.formBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.background {
+  background-image: url("./photo/backgroundPhoto.jpg");
+  background-size: cover;
+  border-radius: 10px;
+  width: 1290px;
+  height: 700px;
+}
+
+.formIntroduce {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  color: black;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.userData {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+
+  input, select {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: Poppins, sans-serif;
+    border: 3px solid darkred;
+  }
+
+  .btnForm {
+    max-width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: darkred;
+    color: #c1c1c1;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    margin-left: 20px;
+  }
+}
+.contact{
+  font-family: Poppins, sans-serif;
+  color: white;
+  margin-top: 60px;
+  margin-left: 40px;
+  div {
+    margin: 20px;
+  }
+}
