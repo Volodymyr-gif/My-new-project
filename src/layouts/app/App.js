@@ -5,11 +5,12 @@ import MotorcyclePage from "../MotorcyclePage/MotorcyclePage";
 import AboutUsInfo from "../AboutUs/AboutUsInfo";
 import WorldsNews from "../WorldsNews/WorldsNews";
 import TypeOfMotorcycle from "../TypeOfMotorcycle/TypeOfMotorcycle";
-import Contact from "../Contact/Contact"
+import Contact from "../Contact/Contact";
+import GuitarPage from "../GuitarMain/GuitarPage/GuitarPage";
 
 function App() {
     return (
-        <Contact/>
+        <GuitarPage/>
     );
 }
 
