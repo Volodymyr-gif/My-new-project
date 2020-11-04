@@ -10,7 +10,7 @@ const GuitarPage = () => {
     return (
         <main className="guitarContainer">
             <header className="guitarNav">
-                <nav className="nav-partGuitar">
+                <nav className="nav-Guitar">
                     <div className="main-icon">
                         <a href="#" className="first-nav-word">Guitar</a>
                         <a href="#" className="second-nav-word">lifestyle</a>

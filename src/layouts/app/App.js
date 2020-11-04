@@ -7,10 +7,11 @@ import WorldsNews from "../WorldsNews/WorldsNews";
 import TypeOfMotorcycle from "../TypeOfMotorcycle/TypeOfMotorcycle";
 import Contact from "../Contact/Contact";
 import GuitarPage from "../GuitarMain/GuitarPage/GuitarPage";
+import GuitarHistory from "../GuitarMain/GuitarsHistory/GuitarsHistory";
 
 function App() {
     return (
-        <GuitarPage/>
+        <GuitarHistory/>
     );
 }
 
