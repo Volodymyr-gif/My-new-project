@@ -8,10 +8,11 @@ import TypeOfMotorcycle from "../TypeOfMotorcycle/TypeOfMotorcycle";
 import Contact from "../Contact/Contact";
 import GuitarPage from "../GuitarMain/GuitarPage/GuitarPage";
 import GuitarHistory from "../GuitarMain/GuitarsHistory/GuitarsHistory";
+import GuitarsType from "../GuitarMain/TypeOfGuitars/GuitarsType";
 
 function App() {
     return (
-        <GuitarHistory/>
+        <GuitarsType/>
     );
 }
 
