@@ -1,0 +1,58 @@
+.guitarContainer {
+  background-image: url("../GuitarPage/photo/background.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.backgroundGuitarForm {
+  background-image: url("./photo/formback.jpg");
+  background-size: cover;
+  max-width: 1290px;
+  height: 100%;
+  margin-left: 120px;
+  padding: 10px;
+  border-radius: 40px;
+}
+.formGuitar {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  text-align: left;
+  padding-right: 20px;
+  padding-top: 20px;
+  color: #ff8a2f;
+}
+
+.GuitarUserData {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+
+  input, select {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: Poppins, sans-serif;
+    border: 3px solid #8a3a07;
+    background-color: rgba(#bc681d, 0.5);
+    color: black;
+  }
+  .btnForm {
+    max-width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8a3a07;
+    color: #c1c1c1;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 930px) {
+  .backgroundGuitarForm {
+    margin: 0;
+  }
+}

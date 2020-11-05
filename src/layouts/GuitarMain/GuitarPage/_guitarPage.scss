@@ -24,7 +24,7 @@
 
 @media (max-width: 1099px) {
   .nav-li {
-    width: 70%;
+    width: 40%;
   }
 }
 
@@ -45,11 +45,41 @@
   font-size: 50px;
   margin: 30px;
   text-align: center;
+
   span {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 15px;
     color: #212121;
+  }
+}
+
+.burgerGuitar {
+  display: none;
+  font-size: 30px;
+  color: #ff8f29;
+}
+
+.navBurgerGuitar {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 30vh;
+
+  li a {
+    font-family: Poppins, sans-serif;
+    color: #e79e5e;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 790px) {
+  .burgerGuitar {
+    display: block;
+    cursor: pointer;
   }
 }
 

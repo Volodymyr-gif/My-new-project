@@ -15,14 +15,14 @@ const ImageAnimation = () => {
             <div>
                 <RotateInDownLeft>
                     <h2 className="textToChoose">LEARN TO PLAY THE GUITAR</h2>
-                    <img onClick={""} alt={"guitar"} src={guitar} width={"480px"} height={"749px"}/>
+                    <a href="/guitarPage"><img onClick={""} alt={"guitar"} src={guitar} width={"480px"} height={"749px"}/></a>
                 </RotateInDownLeft>
             </div>
             <ZoomIn><span>OR</span></ZoomIn>
             <div>
                 <RotateInDownRight>
                     <h2 className="textToChoose">LEARN TO RIDE A MOTORCYCLE</h2>
-                    <a href="http://localhost:3000/MotorcyclePage/MotorcyclePage.js">
+                    <a href="/motorcyclePage">
                         <img alt={"motorcycle"} src={motorcycle} width={"500px"}/>
                     </a>
                 </RotateInDownRight>
@@ -35,14 +35,13 @@ const ChoosePage = () => {
     const [showImages, setShowImages] = useState(false);
 
     useEffect(() => {
-        const timeout = setTimeout(() => {
+        const timeout =  setTimeout(() => {
             setShowImages(true)
         }, 2500);
         return () => clearTimeout();
     }, [])
 
     return (
-
         <header className="firstContainer">
             <div className="parentContainer">
                 <h1 className="mainQuestion">
