@@ -1,13 +1,29 @@
 import React from "react";
 import "./_contact.scss";
 import NavigationMoto from "../../../Components/Navigation/navigation";
+import emailjs from "emailjs-com";
+import {init} from 'emailjs-com';
+
+init("user_tLKAs9kqzGwUjsbC5E3Tr");
 
 const Form = () => {
+    function sendEmail(e) {
+        e.preventDefault();
+
+        emailjs.sendForm('service_q54lcvq', 'template_s14ju38', e.target, 'user_tLKAs9kqzGwUjsbC5E3Tr')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset();
+    }
+
     return (
-        <form className="userData">
-            <input type="text" placeholder="Enter your name"/>
-            <input type="text" placeholder="Enter your surname"/>
-            <select placeholder="Choose which one you prefer better">
+        <form onSubmit={sendEmail} className="userData">
+            <input type="text" placeholder="Enter your name" name='name'/>
+            <input type="text" placeholder="Enter your surname" name='surname'/>
+            <select placeholder="Choose which one you prefer better" name='subject'>
                 <option>Choose your best type of riding:</option>
                 <option>Wood ride</option>
                 <option>Ride in the city</option>
@@ -16,8 +32,8 @@ const Form = () => {
                 <option>Making some tricks</option>
                 <option>Off-road driving</option>
             </select>
-            <input type="number" placeholder="How years old are you"/>
-            <button className="btnForm">Send the form</button>
+            <input type="number" placeholder="How years old are you" name='age'/>
+            <input className="btnForm" type='submit' value='Send the form'></input>
         </form>
     );
 }

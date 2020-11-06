@@ -1,14 +1,31 @@
 import React from "react";
 import "./guitarcontact.scss";
 import NavGuitar from "../../../Components/NavigationGuitar/NavGuitar";
+import emailjs from 'emailjs-com';
+import {init} from 'emailjs-com';
+
+init("user_tLKAs9kqzGwUjsbC5E3Tr");
 
 const GuitarForm = () => {
+
+    function sendEmail(e) {
+        e.preventDefault();
+
+        emailjs.sendForm('service_q54lcvq', 'template_6cch76j', e.target, 'user_tLKAs9kqzGwUjsbC5E3Tr')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset();
+    }
+
     return (
         <>
-            <form className="GuitarUserData">
-                <input type="text" placeholder="Enter your name"/>
-                <input type="text" placeholder="Enter your surname"/>
-                <select placeholder="Choose which one you prefer better">
+            <form onSubmit={sendEmail} className="GuitarUserData">
+                <input type="text" placeholder="Enter your name" name='name'/>
+                <input type="text" placeholder="Enter your surname" name='surname'/>
+                <select placeholder="Choose which one you prefer better" name='subject'>
                     <option>Choose your guitar prefer:</option>
                     <option>Acoustic guitar</option>
                     <option>Electro guitar</option>
@@ -16,14 +33,14 @@ const GuitarForm = () => {
                     <option>Banjo</option>
                     <option>Bass guitar</option>
                 </select>
-                <select>
+                <select name='object'>
                     <option>Your level of playing guitar :</option>
                     <option>Beginner</option>
                     <option>Middle</option>
                     <option>Professional</option>
                 </select>
-                <input type="number" placeholder="How years old are you"/>
-                <button className="btnForm">Send the form</button>
+                <input type="number" placeholder="How years old are you" name='age'/>
+                <input className="btnForm" type='submit' value='Send the form'></input>
             </form>
         </>
     );
